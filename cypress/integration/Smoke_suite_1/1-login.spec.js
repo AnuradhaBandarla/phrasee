@@ -5,7 +5,7 @@
 describe('V8 Login Page', function()
 
 {
-this.beforeAll('visit pure360',function(){
+this.beforeAll('visit Pure360',function(){
     cy.visit("https://app.pure360.com");
 })
 
