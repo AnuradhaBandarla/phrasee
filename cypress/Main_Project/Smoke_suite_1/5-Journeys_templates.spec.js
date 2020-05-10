@@ -5,13 +5,13 @@ describe('5 Journey templates', function() {
         //cy.visit("https://app.release.qa.pur3.net/");
         cy.visit("https://app.pure360.com");
         cy.login();
+        cy.wait(1000);
         // TODO: Improve selector
         cy.get('[href="/journeys"]').click();
         cy.get('[data-test-id="new-journey-button"]').click();
         cy.wait(1000);
     })
-
-
+    
     it('renders the signup journey template', function () {
        
       cy.get('[data-test-id="journey-template-collection_group"]').find('[data-test-id="journey-template-collection_template"]').each(($e1, index, $list)=>{

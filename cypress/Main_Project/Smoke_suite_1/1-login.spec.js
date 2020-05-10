@@ -18,7 +18,7 @@ this.beforeAll('visit Pure360',function(){
             
        }) 
     it('validates the alert when logged in to V8 with invalid user credentials', function() {
-        cy.visit("https://app.pure360.com");
+       cy.visit("https://app.pure360.com");
        cy.get('input[name="username"]').type('anuraadha');
        cy.get('input[name="password"]').type('puretest123');
        cy.get('.btn.btn-success.btn-block.ng-binding').click();
