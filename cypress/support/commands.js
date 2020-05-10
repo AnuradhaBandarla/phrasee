@@ -16,7 +16,7 @@ Cypress.Commands.add('login', (username, password) =>
 {
   cy.get('input[name="username"]').type('anu');
   cy.get('input[name="password"]').type('Puretest123');
-  cy.wait(1000)
+  cy.wait()
   cy.get('.btn.btn-success.btn-block.ng-binding').click();
 
 })
