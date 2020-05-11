@@ -3,7 +3,7 @@ import 'cypress-file-upload';
 describe('lists via import', function()
  {
         beforeEach(function() {
-            cy.visit("https://app.pure360.com");
+            cy.visit("https://app.release.qa.pur3.net/");
             cy.login();
  })
       

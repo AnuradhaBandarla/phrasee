@@ -6,19 +6,20 @@ describe('V8 Login Page', function()
 
 {
 this.beforeAll('visit Pure360',function(){
-    cy.visit("https://app.pure360.com");
+    cy.visit("https://app.release.qa.pur3.net/");
 })
 
     it('logs in to V8 with valid user credentials', function() {
        
        cy.login()
        cy.wait(2000)
-       cy.get('[class="page-heading-title ng-binding ng-scope"]').should('have.include.text','welcome')
+       //cy.get(Class='["getting-started ng-binding"]').should('have.text', 'Getting started with campaigns')
+        cy.get('[class="page-heading-title ng-binding ng-scope"]').should('have.include.text','welcome')
        cy.go('back')
             
        }) 
     it('validates the alert when logged in to V8 with invalid user credentials', function() {
-       cy.visit("https://app.pure360.com");
+       cy.visit("https://app.release.qa.pur3.net/");
        cy.get('input[name="username"]').type('anuraadha');
        cy.get('input[name="password"]').type('puretest123');
        cy.get('.btn.btn-success.btn-block.ng-binding').click();

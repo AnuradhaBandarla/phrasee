@@ -3,11 +3,12 @@ describe('5 Journey templates', function() {
     beforeEach(function() {
         // Log in and navigate to journey templates
         //cy.visit("https://app.release.qa.pur3.net/");
-        cy.visit("https://app.pure360.com");
+        cy.visit("https://app.release.qa.pur3.net/");
         cy.login();
         cy.wait(1000);
         // TODO: Improve selector
-        cy.get('[href="/journeys"]').click();
+        //cy.get('[href="/journeys"]').click();
+        cy.RenderAutomationPage();
         cy.get('[data-test-id="new-journey-button"]').click();
         cy.wait(1000);
     })
