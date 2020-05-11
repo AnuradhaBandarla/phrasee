@@ -65,7 +65,7 @@ Cypress.Commands.add("finish_list_upload", () => {
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-import 'cypress-file-upload';
+/*import 'cypress-file-upload';
 
 
   // Thus, cy.login can be used in all other files
@@ -1008,4 +1008,4 @@ import 'cypress-file-upload';
       .children('div')
       .children('select')
       .select(numberOfRecords)
-  })
+  })//
