@@ -34,8 +34,8 @@ Cypress.Commands.add('RenderAutomationPage', () => {
 Cypress.Commands.add('login', (username, password) => {
   cy.get('input[name="username"]').type('anuradha');
   cy.get('input[name="password"]').type('puretest123');
-  cy.wait(1000);
-  cy.get('.btn.btn-success.btn-block.ng-binding').click();
+
+  cy.get('.btn.btn-success.btn-block').click();
 });
 
 //---below is a command  to finish the list upload process ---
@@ -73,7 +73,7 @@ Cypress.Commands.add('finish_list_upload', () => {
     byId,
     byStyle
   } from '../../helpers/selectors'
-  
+
   // for login purposes
   Cypress.Commands.add('loginPure', (email, password) => {
     window.localStorage.setItem('pure360.access_token', '');
@@ -85,7 +85,7 @@ Cypress.Commands.add('finish_list_upload', () => {
     cy.get('button')
       .click()
   });
-  
+
   /************* MESSAGES *************/
 // messages buttons
 Cypress.Commands.add('selectMessagesAction', (buttonName) => {
