@@ -63,7 +63,7 @@ Cypress.Commands.add('login', (username, password) => {
 });
 
 //---below is a command  to finish the list upload process ---
-Cypress.Commands.add('finish_list_upload', () => {
+Cypress.Commands.add('finishListUpload', () => {
   cy.get('[type="checkbox"]').click({
     force: true,
   });

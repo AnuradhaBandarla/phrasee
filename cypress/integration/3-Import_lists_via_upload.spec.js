@@ -23,7 +23,7 @@ describe('lists via import', function () {
         mimeType: 'text/csv',
       });
     });
-    cy.finish_list_upload();
+    cy.finishListUpload();
     cy.findByText('Lists and contacts').should('exist');
   });
 });
