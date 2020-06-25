@@ -31,7 +31,7 @@ describe('Main menu validation', function () {
     cy.findByText('Export').should('exist');
   });
 
-  it('renders the Analytics page', function () {
+  it.only('renders the Analytics page', function () {
     cy.findByText('Analytics').click();
     cy.findByTestId('page-heading_title').should('contain.text', 'Analytics');
   });

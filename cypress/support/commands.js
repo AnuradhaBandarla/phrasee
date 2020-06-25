@@ -1,8 +1,10 @@
-import { configure } from '@testing-library/cypress';
+import {
+  configure
+} from '@testing-library/cypress';
 import '@testing-library/cypress/add-commands';
 
 configure({
-  testIdAttribute: 'test-id',
+  testIdAttribute: 'data-test-id',
 });
 
 // ***********************************************
@@ -223,8 +225,8 @@ Cypress.Commands.add('selectJourney', (journeyName) => {
   switch (journeyName) {
     case 'Anniversary':
       cy.contains(
-        'Message contacts an the anniversary of a date, e.g. birthday'
-      )
+          'Message contacts an the anniversary of a date, e.g. birthday'
+        )
         .parent(byClass('panel-body journey-template-information'))
         .children(byClass('btn-success btn-block journey-template-button btn'))
         .click();
@@ -243,8 +245,8 @@ Cypress.Commands.add('selectJourney', (journeyName) => {
       break;
     case 'Welcome':
       cy.contains(
-        'Nurture, onboard or educate new contacts with a series of messages'
-      )
+          'Nurture, onboard or educate new contacts with a series of messages'
+        )
         .parent(byClass('panel-body journey-template-information'))
         .children(byClass('btn-success btn-block journey-template-button btn'))
         .click();
@@ -298,20 +300,20 @@ Cypress.Commands.add('removeJourneyNode', (journeyNode) => {
   switch (journeyNode) {
     case 'Send_3':
       cy.get(
-        byStyle(
-          'left: 0px; width: 300px; height: 89px; top: 777px; opacity: 1;'
+          byStyle(
+            'left: 0px; width: 300px; height: 89px; top: 777px; opacity: 1;'
+          )
         )
-      )
         .children(byClass('journey-node journey-node-type-sendToGroup'))
         .children(byClass('btn-default close btn'))
         .click();
       break;
     case 'Wait_2':
       cy.get(
-        byStyle(
-          'left: 0px; width: 300px; height: 72px; top: 629px; opacity: 1;'
+          byStyle(
+            'left: 0px; width: 300px; height: 72px; top: 629px; opacity: 1;'
+          )
         )
-      )
         .children(byClass('journey-node journey-node-type-timer'))
         .children(byClass('btn-default close btn'))
         .click();
@@ -462,10 +464,10 @@ Cypress.Commands.add('selectAutomationAction', (buttonName) => {
   switch (buttonName) {
     case 'New automation':
       cy.get(
-        byClass(
-          'heading-row-form heading-row-form-right form-inline text-right ng-pristine ng-valid'
+          byClass(
+            'heading-row-form heading-row-form-right form-inline text-right ng-pristine ng-valid'
+          )
         )
-      )
         .children('a')
         .contains(buttonName)
         .click();
@@ -567,10 +569,10 @@ Cypress.Commands.add('selectCommonAction', (buttonName) => {
       break;
     case 'Emails':
       cy.get(
-        byClass(
-          'btn btn-blank btn-md btn-text-lg btn-plain dropdown-toggle opaque ng-binding'
+          byClass(
+            'btn btn-blank btn-md btn-text-lg btn-plain dropdown-toggle opaque ng-binding'
+          )
         )
-      )
         .contains('Emails')
         .click();
       break;
@@ -864,10 +866,10 @@ Cypress.Commands.add('selectEditor', (editor) => {
     case 'Auto Message Import':
       cy.get('a').contains('Auto Message Import').click();
       break;
-    /*   case 'SMS':
-               cy.get(byClass('message-actions-select-'))
-                 .click()
-               break*/
+      /*   case 'SMS':
+                 cy.get(byClass('message-actions-select-'))
+                   .click()
+                 break*/
     default:
       cy.log('WARNING: Editor ' + editor + ' is not available');
   }
