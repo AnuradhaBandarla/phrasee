@@ -8,8 +8,9 @@ describe('lists via import', function () {
   });
 
   it('upload lists in csv format', function () {
-    cy.get('[p3-href="/lists"]').click();
-    cy.get('.btn.btn-success.list-import.ng-binding.ng-scope').click();
+    cy.findByText('Lists').click();
+    cy.findByText('Lists and contacts').should('exist');
+    cy.findByText('Import contacts').click();
     cy.get('[name="listname"]')
       .type('SmokeTest-upload-happylist')
       .type(Date.now());
@@ -23,7 +24,6 @@ describe('lists via import', function () {
       });
     });
     cy.finish_list_upload();
-
-    //cy.wait(1000);
+    cy.findByText('Lists and contacts').should('exist');
   });
 });
