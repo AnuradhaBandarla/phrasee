@@ -33,8 +33,6 @@ describe('Re-engage: not opened Journey', function () {
         cy.findByText('Save').should('exist').click({
             force: true
         })
-        cy.get('.btn-success').click({
-            multiple: true
-        })
+        cy.findByText('Activate journey').should('exist').click()
     })
 })
