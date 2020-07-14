@@ -88,6 +88,23 @@ Cypress.Commands.add('navigateTonotClickedJourneyPage', () => {
     .type(Date.now());
   cy.findByTestId('journeys-save-modal_save-button').click();
 })
+
+//---below is a command to navigate to anniversary journey page
+Cypress.Commands.add('navigateToanniversaryJourneyPage', () => {
+  cy.visit('https://app.release.qa.pur3.net/');
+  cy.login();
+  cy.get('.site-header').findByText('Automations').click()
+  cy.findByText('New journey').click();
+  cy.findByTestId('journey-template-collection_group')
+    .findAllByText('Preview and use')
+    .eq(3)
+    .click();
+  cy.findByText('Get started with this journey').click();
+  cy.findByTestId('input-field_input-element')
+    .type('Reg test Anniversary Journey ')
+    .type(Date.now());
+  cy.findByTestId('journeys-save-modal_save-button').click();
+})
 // ---below is a command used to login to V8---
 Cypress.Commands.add('login', (username, password) => {
   cy.get('input[name="username"]').type('anuradha');
