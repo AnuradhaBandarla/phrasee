@@ -54,6 +54,24 @@ Cypress.Commands.add('navigateToSignupJourneyPage', () => {
     .type(Date.now());
   cy.findByTestId('journeys-save-modal_save-button').click();
 });
+
+//---below is a command to navigate to re-engage:not-opened journey page
+Cypress.Commands.add('navigateTonotOpenedJourneyPage', () => {
+  cy.visit('https://app.release.qa.pur3.net/');
+  cy.login();
+  cy.get('.site-header').findByText('Automations').click()
+  cy.findByText('New journey').click();
+  cy.findByTestId('journey-template-collection_group')
+    .findAllByText('Preview and use')
+    .eq(1)
+    .click();
+  cy.findByText('Get started with this journey').click();
+  cy.findByTestId('input-field_input-element')
+    .type('Reg test Re-engage:notopened Journey ')
+    .type(Date.now());
+  cy.findByTestId('journeys-save-modal_save-button').click();
+})
+
 // ---below is a command used to login to V8---
 Cypress.Commands.add('login', (username, password) => {
   cy.get('input[name="username"]').type('anuradha');
