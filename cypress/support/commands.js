@@ -39,20 +39,20 @@ Cypress.Commands.add('RenderAutomationPage', () => {
     });
 });
 //below is a command to navigate to signup journey page
-Cypress.Commands.add('NavigateToSignupJourneyPage', () => {
+Cypress.Commands.add('navigateToSignupJourneyPage', () => {
   cy.visit('https://app.release.qa.pur3.net/');
   cy.login();
-  cy.get('.main-nav').findByText('Automations').click();
-  cy.findByText('New journey').should('exist').click();
-  cy.get('[data-test-id="panel_body"]')
+  cy.get('.site-header').findByText('Automations').click()
+  cy.findByText('New journey').click();
+  cy.findByTestId('journey-template-collection_group')
+    .findAllByText('Preview and use')
     .first()
-    .findByText('Preview and use')
     .click();
-  cy.findByText('Get started with this journey').should('exist').click();
-  cy.get('[data-test-id="input-field_input-element"]')
+  cy.findByText('Get started with this journey').click();
+  cy.findByTestId('input-field_input-element')
     .type('HP-Signup Journey ')
     .type(Date.now());
-  cy.get('[data-test-id="journeys-save-modal_save-button"]').click();
+  cy.findByTestId('journeys-save-modal_save-button').click();
 });
 // ---below is a command used to login to V8---
 Cypress.Commands.add('login', (username, password) => {
