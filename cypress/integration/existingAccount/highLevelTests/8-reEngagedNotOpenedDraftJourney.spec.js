@@ -1,6 +1,6 @@
 describe('Re-engage: not opened Journey', function () {
 
-    it('chooses a list in the start step', function () {
+    it('sets up draft not opened journey', function () {
 
         cy.navigateTonotOpenedJourneyPage()
         cy.findAllByTestId('graph-node').first().click({
@@ -33,6 +33,6 @@ describe('Re-engage: not opened Journey', function () {
         cy.findByText('Save').should('exist').click({
             force: true
         })
-        cy.findByText('Activate journey').should('exist').click()
+        //cy.findByText('Activate journey').should('exist').click()
     })
 })

@@ -1,6 +1,6 @@
 describe('Anniversary Journey', function () {
 
-    it('chooses a list in the start step', function () {
+    it('sets up anniversary journey', function () {
 
         cy.navigateToanniversaryJourneyPage()
         cy.findAllByTestId('graph-node').first().click({

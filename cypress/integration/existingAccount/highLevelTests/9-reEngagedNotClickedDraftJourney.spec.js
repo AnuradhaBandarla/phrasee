@@ -1,6 +1,6 @@
 describe('Re-engage: not clicked Journey', function () {
 
-    it('chooses a list in the start step', function () {
+    it('sets up draft not clicked journey', function () {
 
         cy.navigateTonotClickedJourneyPage()
         cy.findAllByTestId('graph-node').first().click({

@@ -105,6 +105,23 @@ Cypress.Commands.add('navigateToanniversaryJourneyPage', () => {
     .type(Date.now());
   cy.findByTestId('journeys-save-modal_save-button').click();
 })
+
+//---below is a command to navigate to custom date field journey page
+Cypress.Commands.add('navigateTocustomDateFieldJourneyPage', () => {
+  cy.visit('https://app.release.qa.pur3.net/');
+  cy.login();
+  cy.get('.site-header').findByText('Automations').click()
+  cy.findByText('New journey').click();
+  cy.findByTestId('journey-template-collection_group')
+    .findAllByText('Preview and use')
+    .eq(4)
+    .click();
+  cy.findByText('Get started with this journey').click();
+  cy.findByTestId('input-field_input-element')
+    .type('Reg test Custom Date Journey ')
+    .type(Date.now());
+  cy.findByTestId('journeys-save-modal_save-button').click();
+})
 // ---below is a command used to login to V8---
 Cypress.Commands.add('login', (username, password) => {
   cy.get('input[name="username"]').type('anuradha');
@@ -134,3 +151,21 @@ Cypress.Commands.add('finishListUpload', () => {
     force: true,
   });
 });
+Cypress.Commands.add('selectcontentforEmailCampaign', () => {
+
+  cy.get('[type="text"]').type('Aut-MSG')
+  cy.get('[ng-click="search()"]').click()
+  //cy.findByText('Search').click().wait(500)
+  //cy.get('[type="radio"]').check()
+  cy.get('[class="row group"]').eq(1).click()
+  cy.findByText('Next').click()
+  cy.findByText('Search lists').click()
+  cy.get('[type="text"]').first().type('donotdelete')
+  cy.get('[type="submit"]').click()
+  cy.findByText('DoNotDeleteList').click()
+  cy.findByText('Next').click()
+  cy.findByText('Start Now').click()
+  cy.findAllByText('Start Now').first().click()
+  cy.findAllByText('Go to campaigns').click()
+
+})

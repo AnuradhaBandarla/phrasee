@@ -1,5 +1,5 @@
 describe('Signup Journey', function () {
-    it('chooses a list in the start step', function () {
+    it('sets up draft signup journey', function () {
 
         cy.navigateToSignupJourneyPage()
         cy.findAllByTestId('graph-node').first().click({
