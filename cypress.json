@@ -3,7 +3,6 @@
   "defaultCommandTimeout": 10000,
   "execTimeout": 20000,
   "projectId": "c6rrio",
-  "reporter": "mochawesome",
   "reporterOptions": {
     "overwrite": "false"
   }

@@ -169,3 +169,11 @@ Cypress.Commands.add('selectcontentforEmailCampaign', () => {
   cy.findAllByText('Go to campaigns').click()
 
 })
+Cypress.Commands.add('ActivateJourney', () => {
+  cy.get('[data-test-id="journey-state-panel_button"]')
+    .should('be.enabled')
+    .click({
+      force: true,
+    });
+  cy.findByText('Yes, activate').click()
+})

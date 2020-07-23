@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" ",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cypress open",
-    "run": "cypress run"
+    "headless": "cypress run"
   },
   "author": "Anu",
   "license": "ISC",
