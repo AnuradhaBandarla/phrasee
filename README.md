@@ -17,6 +17,13 @@ Below are the depedenicies added to the project:
 - [Have 'Format on save' turned on in your editor.](https://code.visualstudio.com/docs/editor/codebasics#_formatting)
 
 ## Installation
+
+You must have the below installed in your machine prior to Cypress installation
+
+- Node [How to install Node.js](https://confluence.prod.pur3.net/display/CYP/How+to+install+Node.js)
+- Visual studio code editor [How to install Visual studio code editor](https://confluence.prod.pur3.net/display/CYP/How+to+install+Visual+Studio+Code+editor)
+- Gitbash (Windows) or Git (Mac)
+
 Cypress is installed on the root of the project. Before do that, make sure to have Gitbash installed and the URL to clone the project.
 
 Gitbash is available at: https://git-scm.com/downloads
