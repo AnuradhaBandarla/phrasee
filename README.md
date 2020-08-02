@@ -15,3 +15,21 @@ Below are the depedenicies added to the project:
 
 - [Have the Prettier extension installed](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Have 'Format on save' turned on in your editor.](https://code.visualstudio.com/docs/editor/codebasics#_formatting)
+
+## Installation
+Cypress is installed on the root of the project. Before do that, make sure to have Gitbash installed and the URL to clone the project.
+
+Gitbash is available at: https://git-scm.com/downloads
+
+**Clone repository:**
+- Open folder where project is to be cloned
+- Enter: git clone  https://github.com/[your_user_name]/v8_cypress
+
+**Install cypress:**
+- Open project on root folder using gitbash
+- Enter (install cypress): npm install 
+
+
+**Launch cypress:**
+- Open project on root folder using gitbash
+- Enter: npm start
