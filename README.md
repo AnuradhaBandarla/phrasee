@@ -31,10 +31,12 @@ Gitbash is available at: https://git-scm.com/downloads
 **Clone repository:**
 - Open folder where project is to be cloned
 - Enter: git clone  https://github.com/[your_user_name]/v8_cypress
+- For more detals on cloning an existing repository [follow this link](https://confluence.prod.pur3.net/display/CYP/Clone+existing+project+from+git+and+install+Cypress)
 
 **Install cypress:**
 - Open project on root folder using gitbash
 - Enter (install cypress): npm install 
+- For more details on Cypress installatio [follow this link](https://confluence.prod.pur3.net/display/CYP/Clone+existing+project+from+git+and+install+Cypress)
 
 
 **Launch cypress:**
