@@ -53,4 +53,5 @@ Gitbash is available at: https://git-scm.com/downloads
  - Type in npm run headless and hit enter
  - For more details on running tests in headless mode [follow this link](https://confluence.prod.pur3.net/display/CYP/Invoke+or+run+tests+from+command+line+in+headless+mode) 
 
-
+**Run selected subset of files from Cypress interface (multiple tests):**
+ - [Click me to learn more about how to run a selected subset of files from Cypress interface](https://github.com/cypress-io/cypress/issues/3607)
