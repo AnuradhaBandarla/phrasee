@@ -39,6 +39,18 @@ Gitbash is available at: https://git-scm.com/downloads
 - For more details on Cypress installatio [follow this link](https://confluence.prod.pur3.net/display/CYP/Clone+existing+project+from+git+and+install+Cypress)
 
 
-**Launch cypress:**
+## Launch cypress
 - Open project on root folder using gitbash
 - Enter: npm start
+
+**Run tests in headed mode or Cypress test runner:**
+- Once cypress tool is invoked, we can now choose to run independent tests or all tests from cypress test runner
+- To run any one particula test, select the same from the tests listed on the left side of the test runner
+- To run all tests, select 'Run all specs' button, from the top right of the test runner
+
+**Run tests in headless mode:**
+ - Open project on root folder using gitbash in vs code
+ - Type in npm run headless and hit enter
+ - For more details on running tests in headless mode [follow this link](https://confluence.prod.pur3.net/display/CYP/Invoke+or+run+tests+from+command+line+in+headless+mode) 
+
+
