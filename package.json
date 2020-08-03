@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cypress open"
+    "start": "cypress open",
+    "headless": "cypress run"
   },
   "author": "Anu",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "cypress-file-upload": "^3.5.3"
   },
   "dependencies": {
+    "@testing-library/cypress": "^6.0.0",
     "prettier": "^2.0.5"
   }
 }
