@@ -1,6 +1,5 @@
 describe('Main menu validation', function () {
   beforeEach(function () {
-    cy.visit('https://app.release.qa.pur3.net/');
     cy.login();
   });
 
@@ -42,5 +41,7 @@ describe('Main menu validation', function () {
       'contain.text',
       'Connect the dots'
     );
+    cy.findByText('Enquire to get started').should('be.visible');
+    //cy.contains('button', 'Next').click({ force: true });
   });
 });

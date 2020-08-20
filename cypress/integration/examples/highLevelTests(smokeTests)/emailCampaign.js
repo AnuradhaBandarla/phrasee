@@ -4,10 +4,10 @@ describe('Email Campaign', function () {
         cy.login();
     });
 
-    it('renders the Campaigns page', function () {
+    it('schedules an email Campaign ', function () {
         cy.findByText('Campaigns').click();
         cy.findByText('Email').click();
-        cy.selectcontentforEmailCampaign()
+        cy.scheduleAnEmailCampaign()
         cy.findByText('New email campaign').click()
         cy.selectcontentforEmailCampaign()
 

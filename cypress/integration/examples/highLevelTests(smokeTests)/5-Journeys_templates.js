@@ -1,6 +1,5 @@
 describe('5 Journey templates', function () {
   beforeEach(function () {
-    cy.visit('https://app.release.qa.pur3.net/');
     cy.login();
     cy.findByText('Automations').click();
     cy.findByText('New journey').should('exist').click();

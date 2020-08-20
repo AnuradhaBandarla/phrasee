@@ -1,6 +1,5 @@
 describe('list via paste', function () {
   beforeEach(function () {
-    cy.visit('https://app.release.qa.pur3.net/');
     cy.login();
   });
 
