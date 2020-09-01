@@ -4,7 +4,7 @@ describe('Re-engage: not opened Journey', function () {
 
         cy.navigateTonotOpenedJourneyPage()
         cy.SelectStartStep()
-        cy.ChooseListforJourneys('signup list 2')
+        cy.ChooseListforJourneys()
         cy.wait(2000);
         //cy.findAllByText("hello button").eq(0).click()
         cy.ChooseMessage()

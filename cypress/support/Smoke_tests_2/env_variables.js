@@ -1,3 +1,4 @@
+//this is a information file
 describe('log in on release and live', () => {
     it('logs on to qa3', () => {
         expect(Cypress.env('QA3')).to.equal('ok')

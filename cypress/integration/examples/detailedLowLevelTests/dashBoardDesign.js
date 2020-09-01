@@ -1,6 +1,5 @@
 describe('Content of V8 DashBoard for existing user with campaigns sent', function () {
     beforeEach(function () {
-        cy.visit('https://app.release.qa.pur3.net/');
         cy.login();
 
     });

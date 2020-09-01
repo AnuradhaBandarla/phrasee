@@ -57,7 +57,7 @@ Cypress.Commands.add('navigateToSignupJourneyPage', () => {
 
 //---below is a command to navigate to re-engage:not-opened journey page
 Cypress.Commands.add('navigateTonotOpenedJourneyPage', () => {
-  cy.visit('https://app.release.qa.pur3.net/');
+
   cy.login();
   cy.get('.site-header').findByText('Automations').click();
   cy.findByText('New journey').click();
@@ -74,7 +74,6 @@ Cypress.Commands.add('navigateTonotOpenedJourneyPage', () => {
 
 //---below is a command to navigate to re-engage:not-clicked journey page
 Cypress.Commands.add('navigateTonotClickedJourneyPage', () => {
-  cy.visit('https://app.release.qa.pur3.net/');
   cy.login();
   cy.get('.site-header').findByText('Automations').click();
   cy.findByText('New journey').click();
@@ -91,7 +90,6 @@ Cypress.Commands.add('navigateTonotClickedJourneyPage', () => {
 
 //---below is a command to navigate to anniversary journey page
 Cypress.Commands.add('navigateToanniversaryJourneyPage', () => {
-  cy.visit('https://app.release.qa.pur3.net/');
   cy.login();
   cy.get('.site-header').findByText('Automations').click();
   cy.findByText('New journey').click();
@@ -145,7 +143,7 @@ Cypress.Commands.add('finishListUpload', () => {
   cy.get('[id="select-email"]').select(
     'Column A - anuradha.bandarla@pure360.com'
   );
-  cy.wait(1000);
+  cy.wait(2000);
   cy.findByText('Next').click();
   //cy.contains('button', 'Next').click({ force: true });
   cy.wait(1000);
@@ -163,7 +161,7 @@ Cypress.Commands.add('scheduleAnEmailCampaign', () => {
   cy.findByText('Search lists').click();
   cy.get('[type="text"]').first().type('donotdelete');
   cy.get('[type="submit"]').click();
-  cy.findByText('DoNotDeleteList').click();
+  cy.findByText('donotdelete').click();
   cy.findByText('Next').click();
   cy.findByText('Start Now').click();
   cy.findAllByText('Start Now').first().click();
@@ -187,7 +185,7 @@ Cypress.Commands.add('ChooseListforJourneys', () => {
   cy.get('[data-test-id="chosen-list_choose-list-button"]').click({
     force: true,
   });
-  cy.get('[data-test-id="collection-modal_search-input"]').type(Cypress.env('list_name'));
+  cy.get('[data-test-id="collection-modal_search-input"]').type('donotdelete');
   cy.findByText('1 result').should('exist').click();
   cy.get('[type="radio"]').check();
   cy.findByText('Use this list').should('exist').click();

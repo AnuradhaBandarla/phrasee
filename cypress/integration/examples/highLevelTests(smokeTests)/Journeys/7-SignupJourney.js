@@ -2,7 +2,7 @@ describe('Signup Journey', function () {
     it('sets up draft signup journey', function () {
         cy.navigateToSignupJourneyPage();
         cy.SelectStartStep();
-        cy.ChooseList()
+        cy.ChooseListforJourneys()
         cy.wait(2000);
         cy.ChooseMessage()
         cy.removeFirstWaitStep();
