@@ -26,7 +26,7 @@ describe('Content of V8 DashBoard for existing user with campaigns sent', functi
         cy.findByText('View full report').should('exist')
 
     })
-    it.only('verifies the link-Back to campaigns summary', function () {
+    it('verifies the link-Back to campaigns summary', function () {
         cy.findByText('View full report').click()
         cy.findByText('Back to campaigns summary').click()
         cy.findByText('Export').should('exist')
