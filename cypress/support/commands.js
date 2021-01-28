@@ -146,6 +146,12 @@ Cypress.Commands.add('finishListUpload', () => {
     force: true,
   });
 });
+Cypress.Commands.add('navigateToDynamicContentBlockPage',()=>{
+  cy.findByText('Messages').click();
+cy.get('.type-switcher-dropdown > .btn').click();
+cy.findByText('Dynamic content blocks').click().wait(100);
+
+})
 Cypress.Commands.add('scheduleAnEmailCampaign', () => {
   cy.get('[type="text"]').type('Aut-MSG');
   cy.get('[ng-click="search()"]').click();
@@ -205,12 +211,6 @@ Cypress.Commands.add('ChooseListforCustomDateJouney', () => {
   cy.get('[data-test-id="select-field_select-element"]').last().select('On date')
   cy.findByText('Save').click()
 })
-
-
-
-
-
-
 
 Cypress.Commands.add('ChooseMessage', () => {
   cy.findAllByText('Send message to contact').eq(0).should('exist').click();
