@@ -10,8 +10,8 @@
 
   "env": {
     "url": "https://app.integration.qa.pur3.net/",
-    "username": "anuint",
-    "password": "Puretest123"
+    "username": "anu",
+    "password": "puretest123"
   }
 
 }
