@@ -14,6 +14,6 @@ describe('SMScreation', function () {
        // cy.get('[name=message-content]').type('This is to confirm that we have received your payment');
         cy.get('.col-md-11').type('This is to confirm that we have received your payment');
         cy.contains('button', 'Finish').click()
-        cy.findByText('Finish').click()
+        //cy.findByText('Finish').click()
     });
 })
