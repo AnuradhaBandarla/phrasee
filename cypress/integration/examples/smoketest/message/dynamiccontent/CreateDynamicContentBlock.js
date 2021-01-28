@@ -1,7 +1,6 @@
 describe('DynamicContentBlock', function () {
     beforeEach(function () {
-      cy.visit('https://app.integration.qa.pur3.net/');
-      cy.login();
+           cy.login();
    });
     it('create a Dynamic Content Block', function () {
       cy.findByText('Messages').click();
