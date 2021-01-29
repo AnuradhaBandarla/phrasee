@@ -11,7 +11,9 @@ describe('V8 Login Page', function () {
   });
 
   it('validates the alert when logged in to V8 with invalid user credentials', function () {
+
     cy.get('input[name="username"]').type('anuraahdha');
+
     cy.get('input[name="password"]').type('puretest123');
     cy.get('.btn.btn-success.btn-block').click();
     cy.get('.alert.alert-danger').should(

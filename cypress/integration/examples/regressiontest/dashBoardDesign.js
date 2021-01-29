@@ -1,7 +1,6 @@
 describe('Content of V8 DashBoard for existing user with campaigns sent', function () {
     beforeEach(function () {
         cy.login();
-
     });
 
     it('Verifies the navigation to dashboard', function () {
@@ -21,6 +20,7 @@ describe('Content of V8 DashBoard for existing user with campaigns sent', functi
     })
     it('navigates to report page from dash board when clicked View report link', function () {
         cy.findByText('View full report').click()
+
         cy.findAllByText('Overview').should('contain.text', 'Overview').wait(50)
         cy.go('back')
         cy.findByText('View full report').should('exist')
@@ -31,6 +31,5 @@ describe('Content of V8 DashBoard for existing user with campaigns sent', functi
         cy.findByText('Back to campaigns summary').click()
         cy.findByText('Export').should('exist')
     })
-
 
 })

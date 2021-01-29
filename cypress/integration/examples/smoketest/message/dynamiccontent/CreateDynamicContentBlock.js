@@ -13,8 +13,9 @@ describe('DynamicContentBlock', function () {
       cy.findByText('Save and finish').click({force:true})
       cy.get('[p3-notify=""] > .alert').contains('Your Dynamic Content Block has been successfully created')
 //Deleting the above created dynamic content.
-      cy.get(':nth-child(1) > .slat > .slat-content > .slat-action > .btn-group > .dropdown-toggle > .caret > .ng-isolate-scope > .icon > svg').click();
-      cy.get(':nth-child(1) > .slat > .slat-content > .slat-action > .btn-group > .dropdown-menu > .content-item-delete-container > .content-item-delete').click();
+      cy.get('[class="slat-content"]').first()
+cy.get('[class="btn btn-default dropdown-toggle"]').click()
+cy.findByText('Delete').click()
       cy.findByText('Delete this Dynamic Content Block').click();
      })
   }); 

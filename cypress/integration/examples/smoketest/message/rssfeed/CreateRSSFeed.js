@@ -1,6 +1,6 @@
 describe('RSS Feed Creation', function () {
     beforeEach(function () {
-     
+
       cy.login();
     });
     it('create a RSS Feed', function () {
