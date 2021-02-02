@@ -5,7 +5,7 @@ describe('Re-engage: not clicked Journey', function () {
         cy.navigateTonotClickedJourneyPage()
         cy.SelectStartStep()
         cy.ChooseListforJourneys()
-        cy.wait(2000);
+        cy.wait(1000*2);
         //cy.findAllByText("hello button").eq(0).click()
         cy.ChooseMessage()
         cy.ActivateJourney()
