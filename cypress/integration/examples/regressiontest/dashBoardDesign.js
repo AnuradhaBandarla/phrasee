@@ -1,8 +1,6 @@
 describe('Content of V8 DashBoard for existing user with campaigns sent', function () {
     beforeEach(function () {
-        cy.visit('https://app.release.qa.pur3.net/');
         cy.login();
-
     });
 
     it('Verifies the navigation to dashboard', function () {
@@ -22,12 +20,16 @@ describe('Content of V8 DashBoard for existing user with campaigns sent', functi
     })
     it('navigates to report page from dash board when clicked View report link', function () {
         cy.findByText('View full report').click()
-        cy.findAllByText('Overview').should('contain.text', 'Overview')
+
+        cy.findAllByText('Overview').should('contain.text', 'Overview').wait(50)
+        cy.go('back')
+        cy.findByText('View full report').should('exist')
 
     })
-    it('navigates back to dashboard ', function () {
-        cy.go('back')
-
+    it('verifies the link-Back to campaigns summary', function () {
+        cy.findByText('View full report').click()
+        cy.findByText('Back to campaigns summary').click()
+        cy.findByText('Export').should('exist')
     })
 
 })

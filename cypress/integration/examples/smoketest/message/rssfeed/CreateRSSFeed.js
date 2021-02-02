@@ -1,6 +1,6 @@
 describe('RSS Feed Creation', function () {
     beforeEach(function () {
-      cy.visit('https://app.release.qa.pur3.net/');
+
       cy.login();
     });
     it('create a RSS Feed', function () {

@@ -1,6 +1,6 @@
 describe('Main menu validation', function () {
   beforeEach(function () {
-    cy.visit('https://app.release.qa.pur3.net/');
+
     cy.login();
   });
 
@@ -17,13 +17,11 @@ describe('Main menu validation', function () {
 
   it('renders the Campaigns page', function () {
     cy.findByText('Campaigns').click();
-    cy.findByText('SMS').should('exist');
-    cy.findByText('Email').should('exist');
   });
 
   it('renders the Automations page', function () {
     cy.findByText('Automations').click();
-    cy.findByText('New journey').should('exist');
+
   });
 
   it('renders the Reports', function () {
@@ -42,5 +40,8 @@ describe('Main menu validation', function () {
       'contain.text',
       'Connect the dots'
     );
+
+    cy.findByText('Enquire to get started').should('be.visible');
+   
   });
 });

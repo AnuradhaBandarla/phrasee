@@ -1,9 +1,17 @@
 {
-  "baseUrl": "https://app.pure360.com/",
+
+  "base url": "https://app.",
   "defaultCommandTimeout": 10000,
   "execTimeout": 20000,
   "projectId": "c6rrio",
   "reporterOptions": {
     "overwrite": "false"
+  },
+
+  "env": {
+    "url": "https://app.integration.qa.pur3.net/",
+    "username": "anu",
+    "password": "puretest123"
   }
+
 }
