@@ -1,4 +1,5 @@
 describe('SMScreation', function () {
+
     beforeEach(function () {
         cy.login();
     });
@@ -15,3 +16,4 @@ describe('SMScreation', function () {
       
     });
 })
+

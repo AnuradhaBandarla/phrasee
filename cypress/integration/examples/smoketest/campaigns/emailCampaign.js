@@ -1,5 +1,6 @@
 describe('Email Campaign', function () {
     beforeEach(function () {
+
         cy.login();
     });
 
@@ -7,6 +8,7 @@ describe('Email Campaign', function () {
         cy.findByText('Campaigns').click();
         cy.findByText('New email campaign').click();
         cy.scheduleAnEmailCampaign()
+
 
 
     });

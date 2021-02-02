@@ -1,5 +1,6 @@
 describe('Main menu validation', function () {
   beforeEach(function () {
+
     cy.login();
   });
 
@@ -16,12 +17,19 @@ describe('Main menu validation', function () {
 
   it('renders the Campaigns page', function () {
     cy.findByText('Campaigns').click();
+<<<<<<< HEAD
   
+=======
+>>>>>>> upstream/master
   });
 
   it('renders the Automations page', function () {
     cy.findByText('Automations').click();
+<<<<<<< HEAD
    
+=======
+
+>>>>>>> upstream/master
   });
 
   it('renders the Reports', function () {
@@ -40,7 +48,12 @@ describe('Main menu validation', function () {
       'contain.text',
       'Connect the dots'
     );
+
     cy.findByText('Enquire to get started').should('be.visible');
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> upstream/master
   });
 });
