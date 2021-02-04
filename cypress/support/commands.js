@@ -161,7 +161,7 @@ Cypress.Commands.add('scheduleAnEmailCampaign', () => {
   cy.findByText('Next').click();
   cy.findByText('Search lists').click();
   cy.get('[type="text"]').first().type('donotdelete');
-  cy.get('[type="submit"]').click();
+  cy.get('[type="submit"]').click().wait(500);
   cy.findByText('donotdelete').click();
   cy.findByText('Next').click();
   cy.findByText('Start Now').click();
