@@ -12,7 +12,7 @@ cy.get('.ace_scroller').type('<html><p>This is time to go. Red.</p><a href="http
 cy.findByText('Save and finish').click({force:true})
 cy.get('[p3-notify=""] > .alert').contains('Your Dynamic Content Block has been successfully created')})
 it('deletes a Dynamic Content Block', () => {
-  cy.navigateToDynamicContentBlockPage();
+  //cy.navigateToDynamicContentBlockPage();
 cy.get('[class="slat-content"]').first()
 cy.get('[class="btn btn-default dropdown-toggle"]').click()
 cy.findByText('Delete').click()
