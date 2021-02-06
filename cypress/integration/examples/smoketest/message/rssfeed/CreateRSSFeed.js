@@ -1,9 +1,9 @@
 describe('RSS Feed Creation', function () {
-    beforeEach(function () {
+    beforeEach(()=> {
 
       cy.login();
     });
-    it('create a RSS Feed', function () {
+    it('create a RSS Feed', ()=> {
       cy.findByText('Messages').click();
       cy.get('.type-switcher-dropdown > .btn').click();
       cy.findByText('RSS feeds').click();

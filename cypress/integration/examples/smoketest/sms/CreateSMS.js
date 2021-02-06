@@ -1,9 +1,9 @@
 describe('SMScreation', function () {
 
-    beforeEach(function () {
+    beforeEach(()=> {
         cy.login();
     });
-    it('create a SMS message', function () {
+    it('create a SMS message',()=> {
         cy.findByText('Messages').click();
         cy.get('.type-switcher-dropdown > .btn').click();
         cy.findByText('SMS').wait(100).click()

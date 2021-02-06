@@ -1,6 +1,6 @@
 describe('Custom Date field Journey', function () {
 
-    it('creates a draft custom date journey', function () {
+    it('sets up an Active custom date journey', () => {
 
         cy.navigateTocustomDateFieldJourneyPage()
         cy.findAllByTestId('graph-node').first().click()

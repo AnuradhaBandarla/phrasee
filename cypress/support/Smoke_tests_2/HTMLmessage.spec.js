@@ -1,2 +1,0 @@
-// pending //
-//cy.each()

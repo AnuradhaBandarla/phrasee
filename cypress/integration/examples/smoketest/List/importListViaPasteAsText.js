@@ -1,9 +1,9 @@
 describe('list via paste', function () {
-  beforeEach(function () {
+  beforeEach(()=> {
     cy.login();
   });
 
-  it('upload lists in csv format', function () {
+  it('upload lists in csv format', ()=> {
     cy.get('.site-header').findByText('Lists').click()
     cy.findByText('Lists and contacts').should('exist');
     cy.findByText('Import contacts').click();

@@ -1,12 +1,10 @@
 import 'cypress-file-upload';
-
-///<reference types = 'cypress'/>
 describe('lists via import', function () {
-  beforeEach(function () {
+  beforeEach(()=> {
     cy.login();
   });
 
-  it('upload lists in csv format', function () {
+  it('upload lists in csv format', ()=> {
     cy.findByText('Lists').click();
     cy.findByText('Lists and contacts').should('exist');
     cy.findByText('Import contacts').click();

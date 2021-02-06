@@ -1,10 +1,10 @@
-describe('5 Journey templates', function () {
-  before(function () {
+describe('the 5 Journey templates', function () {
+  before(() => {
     cy.login();
     cy.findByText('Automations').click();
     cy.findByText('New journey').should('exist').click();
   });
-  it('renders the 5 journey templates simultaneously', function () {
+  it('renders the 5 journey templates simultaneously', () => {
     cy.get('[data-test-id="panel_body"]').first().findByText('Preview and use').click();
     cy.findByText('Get started with this journey');
     cy.get('[data-test-id="modal_close-button"]').scrollIntoView().click();

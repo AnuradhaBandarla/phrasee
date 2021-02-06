@@ -10,8 +10,8 @@
 
   "env": {
     "url": "https://app.integration.qa.pur3.net/",
-    "username": "anu",
-    "password": "puretest123"
+    "username": "cypresslog",
+    "password": "cypresscomes1"
   }
 
 }

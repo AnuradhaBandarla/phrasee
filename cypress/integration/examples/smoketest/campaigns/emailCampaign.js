@@ -4,7 +4,7 @@ describe('Email Campaign', function () {
         cy.login();
     });
 
-    it('schedules an email Campaign ', function () {
+    it('schedules an email Campaign ', ()=> {
         cy.findByText('Campaigns').click().wait(1000);
              cy.get("body").then($body => {
             

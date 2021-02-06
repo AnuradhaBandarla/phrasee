@@ -1,6 +1,5 @@
 describe('Main menu validation', function () {
   beforeEach(function () {
-
     cy.login();
   });
 

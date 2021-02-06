@@ -1,16 +1,16 @@
 describe('V8 Login Page', function () {
-  beforeEach('visit Pure360', function () {
+  beforeEach(() =>{
     cy.visit(Cypress.env('url'));
   });
 
-  it('logs in to V8 with valid user credentials', function () {
+  it('logs in to V8 with valid user credentials', () =>{
     cy.get('input[name="username"]').type(Cypress.env('username'));
     cy.get('input[name="password"]').type(Cypress.env('password'));
     cy.get('.btn.btn-success.btn-block').click();
     cy.get('.page-heading-title').should('have.include.text', 'welcome');
   });
 
-  it('validates the alert when logged in to V8 with invalid user credentials', function () {
+  it('validates the alert when logged in to V8 with invalid user credentials', () => {
 
     cy.get('input[name="username"]').type('anuraahdha');
 

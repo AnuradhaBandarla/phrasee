@@ -1,5 +1,5 @@
 describe('Signup Journey', function () {
-    it('sets up draft signup journey', function () {
+    it('sets up an Active signup journey', ()=> {
         cy.navigateToSignupJourneyPage();
         cy.SelectStartStep();
         cy.ChooseListforJourneys()

@@ -1,6 +1,6 @@
 describe('Anniversary Journey', function () {
 
-    it('sets up anniversary journey', function () {
+    it('sets up anniversary journey',()=> {
 
         cy.navigateToanniversaryJourneyPage()
         cy.SelectStartStep()

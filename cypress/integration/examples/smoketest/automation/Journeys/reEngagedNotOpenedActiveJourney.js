@@ -1,13 +1,14 @@
-describe('Re-engage: not clicked Journey', function () {
+describe('Re-engage: not opened Journey', function () {
 
-    it('sets up draft not clicked journey', function () {
+    it('sets up an Active not opened journey', ()=> {
 
-        cy.navigateTonotClickedJourneyPage()
+        cy.navigateTonotOpenedJourneyPage()
         cy.SelectStartStep()
         cy.ChooseListforJourneys()
-        cy.wait(1000*2);
+        cy.wait(2000);
         //cy.findAllByText("hello button").eq(0).click()
         cy.ChooseMessage()
         cy.ActivateJourney()
+
     })
 })
