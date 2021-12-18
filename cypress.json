@@ -1,17 +1,17 @@
 {
 
-  "base url": "https://app.",
+  "base url": "https://app-qa.phrasee.co/",
   "defaultCommandTimeout": 10000,
   "execTimeout": 20000,
-  "projectId": "c6rrio",
+  
   "reporterOptions": {
     "overwrite": "false"
   },
 
   "env": {
-    "url": "https://app.integration.qa.pur3.net/",
-    "username": "cypresslog",
-    "password": "cypresscomes1"
+    "url": "https://app-qa.phrasee.co/",
+      "email": "anuradha.bandarla@gmail.com",
+      "password": "Anuradha123#"
   }
 
 }

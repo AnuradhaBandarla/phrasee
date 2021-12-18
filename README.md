@@ -1,57 +1,24 @@
-# QA Automated Tests for V8 
-Mocha - An automated test framework powered by [Cypress](https://www.cypress.io/)
+Steps to setup cypress automation project
 
-## Prerequisites
-
-Make sure you have SSH keys set up on your environment + Github account ([guide](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account)). We recommend using [VSCode](https://code.visualstudio.com/) for developing tests as it provides a fully integrated environment. This README assumes you are using VSCode.
-
-Below are the depedenicies added to the project:
-
-[testing-library/cypres](https://testing-library.com/docs/dom-testing-library/api-queries)  is family of packages which helps you test UI components in a user-centric way. Please enure you:
-
-- [Have the testing-library installed](https://testing-library.com/docs/dom-testing-library/install)
-
-[Prettier](https://prettier.io) helps you to format the code. This makes reviewing tests a much smoother process. Please ensure you:
-
-- [Have the Prettier extension installed](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Have 'Format on save' turned on in your editor.](https://code.visualstudio.com/docs/editor/codebasics#_formatting)
-
-## Installation
-
-You must have the below installed in your machine prior to Cypress installation
-
-- Node [How to install Node.js](https://confluence.prod.pur3.net/display/CYP/How+to+install+Node.js)
-- Visual studio code editor [How to install Visual studio code editor](https://confluence.prod.pur3.net/display/CYP/How+to+install+Visual+Studio+Code+editor)
-- Gitbash (Windows) or Git (Mac)
-
-Cypress is installed on the root of the project. Before do that, make sure to have Gitbash installed and the URL to clone the project.
-
-Gitbash is available at: https://git-scm.com/downloads
-
-**Clone repository:**
-- Open folder where project is to be cloned
-- Enter: git clone  https://github.com/[your_user_name]/v8_cypress
-- For more detals on cloning an existing repository [follow this link](https://confluence.prod.pur3.net/display/CYP/Clone+existing+project+from+git+and+install+Cypress)
-
-**Install cypress:**
-- Open project on root folder using gitbash
-- Enter (install cypress): npm install 
-- For more details on Cypress installatio [follow this link](https://confluence.prod.pur3.net/display/CYP/Clone+existing+project+from+git+and+install+Cypress)
-
-
-## Launch cypress
-- Open project on root folder using gitbash
-- Enter: npm start
-
-**Run tests in headed mode or Cypress test runner:**
-- Once cypress tool is invoked, we can now choose to run independent tests or all tests from cypress test runner
-- To run any one particula test, select the same from the tests listed on the left side of the test runner
-- To run all tests, select 'Run all specs' button, from the top right of the test runner
-
-**Run tests in headless mode:**
- - Open project on root folder using gitbash in vs code
- - Type in npm run headless and hit enter
- - For more details on running tests in headless mode [follow this link](https://confluence.prod.pur3.net/display/CYP/Invoke+or+run+tests+from+command+line+in+headless+mode) 
-
-**Run selected subset of files from Cypress interface (multiple tests):**
- - [Click me to learn more about how to run a selected subset of files from Cypress interface](https://github.com/cypress-io/cypress/issues/3607)
+1.Create a folder –
+mkdir smokeSuite
+2.navigate to the above created folder –
+cd smokeSuite
+3.now create a package.json file by running the below command in vscode editor-
+npm i -init
+keep pressing enter for all the options
+at last say yes
+package.json file is now created for the project
+4.Now open the folder created by selecting the path
+Ex C:\Users\anuradha.bandarla\smokeSuite
+5.Now install cypress as a dependency for the project
+npm install cypress –save-dev
+once installed, you can see a new entry created in the devDependencies as below stating the cypress version installed
+Some one to access this project – download this project and simply enter the command npm install
+in vscode editor
+it will scan package.json and finds the dependency "cypress": "^5.0.0", downloads the cypress software of version 5.0.0 or what ever the version is mentioned
+6.To open test runner, below command should be run in the command prompt terminal:
+node_modules\.bin\cypress open
+ie: you want to hit node_modules from .bin folder and open the cypress tool
+all the executable .exe files of cypress are located in .bin folder of node_modules
+Please make sure to add node_modules to the gitignore file while creating a git repository to avoid duplication for every commit
