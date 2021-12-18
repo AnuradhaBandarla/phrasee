@@ -3,7 +3,7 @@ describe('Login page error validations', () => {
     cy.visit(Cypress.env('url'))
     });
 
-    it.skip('validates when logging in to phrasee with invalid username', () =>{
+    it('validates when logging in to phrasee with invalid username', () =>{
       
       cy.get('input[name="email"]').type('email@emailcom')
       cy.get('input[name="password"]').type(Cypress.env('password')).wait(200)
