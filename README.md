@@ -1,5 +1,5 @@
-Steps to setup cypress automation project
-
+git Steps to setup cypress automation project
+test
 1.Create a folder –
 mkdir smokeSuite
 2.navigate to the above created folder –
@@ -22,4 +22,5 @@ node_modules\.bin\cypress open
 ie: you want to hit node_modules from .bin folder and open the cypress tool
 all the executable .exe files of cypress are located in .bin folder of node_modules
 Please make sure to add node_modules to the gitignore file while creating a git repository to avoid duplication for every commit
+
 # phrasee-Test-Rep
