@@ -15,6 +15,13 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands';
-
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// Returns a random integer from 1 to 1000000:                             
+Cypress.config('Audience Size in Number', `${Math.floor(Math.random() * 1000000) + 1}`)
+
+// Returns a random integer from 1 to 100:
+Cypress.config( 'Avg Open Rate', `${Math.floor(Math.random() * 100) + 1}`)
+
+
